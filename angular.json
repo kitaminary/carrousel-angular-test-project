@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "carrousel_angular-test_project": {
+    "carrousel-angular-test-project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/carrousel_angular-test_project",
+            "outputPath": "dist/carrousel-angular-test-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "carrousel_angular-test_project:build:production"
+              "browserTarget": "carrousel-angular-test-project:build:production"
             },
             "development": {
-              "browserTarget": "carrousel_angular-test_project:build:development"
+              "browserTarget": "carrousel-angular-test-project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "carrousel_angular-test_project:build"
+            "browserTarget": "carrousel-angular-test-project:build"
           }
         },
         "test": {
