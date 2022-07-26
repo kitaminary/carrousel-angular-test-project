@@ -1,0 +1,13 @@
+<div class="carousel_box">
+  <app-image-box class="carousel" [images]="images" [index]="index">
+  </app-image-box>
+  <form [formGroup]="myForm" (ngSubmit)="submitForm()" class="carousel_form">
+    <div class="carousel_form_box">
+      <input hidden id="file" type="file" (change)="change($event);currentNameFile($event)" required accept="image/*">
+      <label class="carousel_form_file" for="file" (focus)="isAdvancedUpload()">Choose image
+      </label>
+      <span class="carousel_form_file_title">{{nameFile}}</span>
+      <button type="submit" class="carousel_button" [class.button--unenable]="newImage === undef">Load photo</button>
+    </div>
+  </form>
+</div>

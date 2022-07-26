@@ -1,0 +1,35 @@
+$box-width: 600px;
+$box-haight: 350px;
+
+
+.images {
+  &_photo {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    width: $box-width;
+    min-height: $box-haight;
+    max-height: $box-haight;
+    z-index: 1;
+  }
+
+  &_box-image--row {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: start;
+    border-radius: 20px;
+    height: $box-haight;
+    z-index: 1;
+  }
+  &_box-image--column {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: start;
+    border-radius: 20px;
+    height: $box-haight;
+    z-index: 1;
+  }
+}

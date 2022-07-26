@@ -1,0 +1,100 @@
+$box-width: 600px;
+$box-haight: 350px;
+
+.image {
+  height: 400px;
+
+  &_select {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    position: fixed;
+    left: 0;
+    padding: 5px;
+    border: 2px dotted black;
+    border-radius: 10px;
+    background-color: rgba(111, 124, 36, 0.384);
+  }
+
+  &_box {
+    display: flex;
+    position: absolute;
+    justify-content: start;
+    border-radius: 20px;
+    height: $box-haight;
+    z-index: 1;
+  }
+
+  &_box-buttons {
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    width: $box-width;
+    height: $box-haight;
+  }
+
+  &_prev {
+    width: 45px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    background-color: #F2F2F2FF;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://pixsector.com/cache/852dce6a/avdf5e9f480fe775c7a63.png);
+    transition: all 0.2s linear;
+    z-index: 2;
+    opacity: 75%;
+
+    &:hover {
+      -webkit-box-shadow: 7px 0px 25px -10px rgba(0, 0, 0, 0.47);
+      -moz-box-shadow: 7px 0px 25px -10px rgba(0, 0, 0, 0.47);
+      box-shadow: 7px 0px 25px -10px rgba(0, 0, 0, 0.47);
+    }
+
+    &:active {
+      -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.47);
+      -moz-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.47);
+      box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.47);
+    }
+  }
+
+  &_next {
+    width: 45px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    outline: none;
+    background-color: #F2F2F2FF;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://pixsector.com/cache/ef1ee4a1/av85f1b171d762037fe92.png);
+    transition: all 0.2s linear;
+    z-index: 2;
+    opacity: 75%;
+
+    &:hover {
+      -webkit-box-shadow: -7px 0px 25px -10px rgba(0, 0, 0, 0.47);
+      -moz-box-shadow: -7px 0px 25px -10px rgba(0, 0, 0, 0.47);
+      box-shadow: -7px 0px 25px -10px rgba(0, 0, 0, 0.47);
+    }
+
+    &:active {
+      -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.47);
+      -moz-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.47);
+      box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.47);
+    }
+  }
+}
+
+
+.button--unenable {
+  pointer-events: none;
+  background-color: rgba(151, 86, 86, 0.267) !important;
+}

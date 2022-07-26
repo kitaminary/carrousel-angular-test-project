@@ -1,0 +1,24 @@
+<div class="image_box-buttons">
+  <div class="image_select">
+    <p>Animations</p>
+    <select name="animations" id="animations" (change)="animation($event.target)">
+      <option value="translateX">From right to left</option>
+      <option value="translateY">From bottom to top</option>
+    </select>
+    <select name="animationsType" id="animationsType" (change)="animationType($event.target)">
+      <option value="ease">ease</option>
+      <option value="linear">linear</option>
+      <option value="ease-in">ease-in</option>
+      <option value="ease-out">ease-out</option>
+      <option value="ease-in-out">ease-in-out</option>
+      <option value="cubic-bezier(.1, -1.5, .1, 2.5)">cubic-bezier</option>
+      <option value="steps(4, start)">steps</option>
+    </select>
+  </div>
+  <button class="image_prev" [class.button--unenable]="index === 0" (click)="index = index - 1"
+    (click)="currentPhoto = 'prev'"></button>
+  <app-images class="image_box" [images]="images" [index]="index" [currentPhoto]="currentPhoto" [translate]="translate"
+    [animationTypes]="animationTypes" [animationSizeImg]="animationSizeImg"></app-images>
+  <button class="image_next" [class.button--unenable]="index === images.length - 1" (click)="index = index + 1"
+    (click)="currentPhoto = 'next'"></button>
+</div>

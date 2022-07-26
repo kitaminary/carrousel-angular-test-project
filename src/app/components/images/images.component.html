@@ -1,0 +1,9 @@
+<div [class.images_box-image--row]="translate === 'translateX'"
+  [class.images_box-image--column]="translate === 'translateY'" [@carouselAnimations]='{value: currentPhoto, params: {
+    nextLength: index * animationSizeImg,
+     prevLength: -index * animationSizeImg,
+    translate: translate,
+    animationTypes: animationTypes
+  }}'>
+  <img class="images_photo" [src]="image" alt="no image" *ngFor="let image of images">
+</div>
